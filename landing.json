@@ -1,0 +1,63 @@
+{
+  "version": 2,
+  "title": "IBM Cloudant Docs",
+  "introduction": "The IBM Cloudant portfolio includes two complementary, document-oriented NoSQL database-as-a-service offerings on the IBM Cloud. In addition to the comprehensive information in the IBM Cloudant docs, links to additional sources of information are provided below.",
+  "product_page": "https://www.ibm.com/products/cloudant",
+  "console_page": "/catalog/services/cloudant",
+  "section_topics": {
+    "links": [
+      {
+        "title": "Getting started with IBM Cloudant",
+        "href": "/docs/cloudant-gen2?topic=cloudant-gen2-getting-started-with-cloudant"
+      },
+      {
+        "title": "Managing access for IBM Cloudant",
+        "href": "/docs/cloudant-gen2?topic=cloudant-gen2-managing-access-for-cloudant"
+      },
+      {
+        "title": "IBM Cloud Monitoring integration",
+        "href": "/docs/cloudant-gen2?topic=cloudant-gen2-monitor-ibm-cloud-pm"
+      },
+      {
+        "title": "Understanding your responsibilities when you use IBM Cloudant",
+        "href": "/docs/cloudant-gen2?topic=cloudant-gen2-cloudant-responsibilities"
+      },
+      {
+        "title": "Getting help and support for IBM Cloudant",
+        "href": "/docs/cloudant-gen2?topic=cloudant-gen2-help-and-support"
+      },
+      {
+        "title": "IBM Cloudant plans",
+        "href": "/docs/cloudant-gen2?topic=cloudant-gen2-plans-and-provisioning"
+      },
+      {
+        "title": "Try IBM Cloudant for free",
+        "href": "/docs/cloudant-gen2?topic=cloudant-gen2-getting-started-with-cloudant"
+      }
+    ]
+  },
+  "section_highlights": [
+    {
+      "title": "Cloudant Blog",
+      "description": "IBM Cloudant database introduction and use cases.",
+      "href": "https://blog.cloudant.com",
+      "type": "blog",
+      "recommended": true
+    },
+    {
+      "title": "Cloudant Learning Center",
+      "description": "Video series to help you learn to use IBM Cloudant.",
+      "href": "https://cloud.ibm.com/docs/cloudant-gen2?topic=cloudant-gen2-learning-center",
+      "type": "video",
+      "recommended": true
+    }
+  ],
+  "section_updates": {
+    "view_more": "/docs/cloudant-gen2?topic=cloudant-gen2-cloudant-gen2-relnotes"
+  },
+  "section_devtools": {
+    "api": "/apidocs/cloudant#introduction",
+    "cli": "/docs/cloudant-gen2?topic=cloudant-gen2-cloudant-cli",
+    "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cloudant"
+  }
+}

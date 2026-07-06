@@ -1,0 +1,204 @@
+toc:
+  properties:
+    subcollection: cloudant-gen2
+    service-name: cloudantnosqldb
+    version: 2
+    category: database
+    audience: service
+    href: /docs/cloudant-gen2/
+    console-page: /docs/cloudant
+    product-page: https://www.ibm.com/cloud/cloudant
+    path: cloudant-gen2
+    label: Cloudant Gen 2
+  entries:
+  - navgroup:
+      id: learn
+      topics:
+      - what-is-cloudant.md
+      - overview-gen.md
+      - advantages.md
+      - topic: getting-started.md
+        navtitle: Getting started
+      - bluemix2.md
+      - usage-and-charges.md
+      - limits.md
+      - connecting.md
+      - learning-center.md
+      - topicgroup:
+          label: Security & compliance
+          topics:
+          - security.md
+          - dataprivacygovernance.md
+          - audit.md
+          - gdpr.md
+      - release-notes.md
+      - deprecations.md
+      - link:
+          label: Gen 1 docs
+          href: https://cloud.ibm.com/docs/Cloudant
+  - navgroup:
+      id: tutorial
+      topics:
+      - locate-service-credentials.md
+      - use-dashboard.md
+      - dig-deeper-dashboard.md
+      - iot-partitioned-database.md
+      - create_service_cli.md
+      - create_backup.md
+  - navgroup:
+      id: howto
+      topics:
+      - basics.md
+      - topicgroup:
+          label: Managing your accounts
+          topics:
+          - curl.md
+          - cors.md
+          - http.md
+          - json.md
+      - topicgroup:
+          label: Working with databases
+          topics:
+          - database.md
+          - creating-a-db.md
+          - getting-db-details.md
+          - getting-a-list-of-all-dbs-in-account.md
+          - getting-docs.md
+          - sending-multiple-queries-to-db.md
+          - getting-changes-to-docs-in-db.md
+          - deleting-a-db.md
+          - sharding.md
+          - mvcc.md
+          - database_partitioning.md
+          - conflicts.md
+          - cap_theorem.md
+      - topicgroup:
+          label: How documents work
+          topics:
+          - docs-overview.md
+          - creating-a-document.md
+          - reading-a-document.md
+          - updating-a-document.md
+          - deleting-a-document.md
+          - tombstone-documents.md
+          - bulk-operations.md
+          - design_documents.md
+          - design_document_management.md
+          - transactions.md
+          - attachments.md
+      - topicgroup:
+          label: Views
+          topics:
+          - creating_views.md
+          - using_views.md
+      - topicgroup:
+          label: Queries
+          topics:
+          - cloudant-query.md
+          - query-json-indexes.md
+          - query-text-indexes.md
+          - query-partial-indexes.md
+          - query2-selector-syntax.md
+          - query2-cloudant-operators.md
+          - query2-parameters.md
+          - query2-explain.md
+          - query-optimizing.md
+          - query-monitoring.md
+      - topicgroup:
+          label: Searches
+          topics:
+          - search.md
+          - search-analyzers.md
+      - topicgroup:
+          label: Replicating databases
+          topics:
+          - replication_guide.md
+          - replication.md
+          - advanced_replication.md
+      - topicgroup:
+          label: Monitoring your instance
+          topics:
+          - active_tasks.md
+          - managing_tasks.md
+      - topicgroup:
+          label: Migrating your plan
+          topics:
+          - migration-overview.md
+          - migrate-to-gen2-standard-plan.md
+      - topicgroup:
+          label: Recovery and backup
+          topics:
+          - disaster-recovery-and-backup.md
+          - active-active.md
+          - backup-cookbook.md
+      - topicgroup:
+          label: Enhancing security for IBM Cloudant
+          topics:
+          - access-iam.md
+          - service-endpoints.md
+          - secure-connection.md
+          - manage-scc.md
+          - secure-data.md
+          - audit-events.md
+  - navgroup:
+      id: reference
+      topics:
+      - responsibilities.md
+      - service-dependency.md
+      - topicgroup:
+          label: Observability
+          topics:
+          - at-integration.md
+          - platform-metrics.md
+      - ha-dr.md
+      - topic: data-portability.md
+        navtitle: Data portability
+      - topicgroup:
+          label: Best practices for IBM Cloudant
+          topics:
+          - best-practices1.md
+          - best-practices2.md
+          - best-practices3.md
+      - topicgroup:
+          label: Sample apps
+          links:
+          - link:
+              label: Deploy microservices with Red Hat OpenShift on IBM Cloud
+              href: https://cloud.ibm.com/docs/solution-tutorials?topic=solution-tutorials-openshift-microservices
+          - link:
+              label: Apply end to end security to a cloud application
+              href: https://cloud.ibm.com/docs/solution-tutorials?topic=solution-tutorials-cloud-e2e-security
+      - client-libraries.md
+      - topicgroup:
+          label: Apache CouchDB
+          topics:
+          - comparison.md
+          - compare.md
+      - topicgroup:
+          label: API & SDK reference docs new
+          links:
+          - link:
+              label: API & SDK reference docs
+              href: https://cloud.ibm.com/apidocs/cloudant
+      - topicgroup:
+          label: CLI
+          topics:
+          - cloudant-cli.md
+      - link:
+          label: Terraform reference docs
+          href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/resource_instance
+  - navgroup:
+      id: help
+      topics:
+      - topicgroup:
+          label: FAQs
+          topics:
+          - authenticating-faq.md
+          - availability-zones-faq.md
+          - document-version-conflicts-faq.md
+          - model-data-faq.md
+          - pricing-faq.md
+          - provisioned-throughput-capacity-faq.md
+          - changes-feed-faq.md
+          - cloudant-query-faq.md
+      - get-help.md
