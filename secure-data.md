@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-06-22"
+lastupdated: "2026-07-07"
 
 keywords: dbaas data protection, top-tier physical platforms, secure access control, data loss, corruption, byok, encryption
 
@@ -91,7 +91,7 @@ To delete a document, follow these steps:
 
    The document is selected for compaction.
 
-For more information, see [Delete a document](/apidocs/cloudant#deletedocument) in the API Reference documentation.
+For more information, see [Delete a document](/docs/apis/cloudant/cloudant-gen2#deletedocument) in the API Reference documentation.
 
 ### Deleting {{site.data.keyword.cloudant_short_notm}} instances
 {: #service-delete}
@@ -112,7 +112,7 @@ To delete a database, follow these steps:
 A database deletion cannot be undone.
 {: important}
 
-For more information, see [Delete a database](/apidocs/cloudant#deletedatabase) in the API Reference documentation.
+For more information, see [Delete a database](/docs/apis/cloudant/cloudant-gen2#deletedatabase) in the API Reference documentation.
 
 The {{site.data.keyword.cloudant_short_notm}} data retention policy describes how long your data is stored after you delete the service. The data retention policy is included in the {{site.data.keyword.cloudant_short_notm}} service description, which you can find in the {{site.data.keyword.cloud_notm}} Terms and Notices.
 

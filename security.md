@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-06-22"
+lastupdated: "2026-07-07"
 
 keywords: dbaas data protection, tier 1 physical platforms, secure access control, data loss, corruption, byok, encryption, protection
 
@@ -55,7 +55,7 @@ including (but not limited to):
 | TLS | {{site.data.keyword.cloudant_short_notm}} requires the use of TLS 1.2+. {{site.data.keyword.cloudant_short_notm}} strongly recommends that you do not pin certificates in your application. Certificates renew regularly, at least annually, and intermediate and root certificates could change when they do. {{site.data.keyword.cloudant_short_notm}} does not send out notifications before certificate renewals. We recommend that you keep your certificate truststore up to date with the latest root certificates. {{site.data.keyword.cloudant_short_notm}} acquires its certificates from Let's Encrypt. You can find their root certificates on the [Let's Encrypt Chains Of Trust](https://letsencrypt.org/certificates/){: external} page. {{site.data.keyword.cloudant_short_notm}} sends a notification if we move to a different certificate authority. |
 | Public Endpoints | All {{site.data.keyword.cloudant_short_notm}} instances are provided with external endpoints that are publicly accessible. |
 | Private Endpoints | Using private endpoints allows customers to connect to an {{site.data.keyword.cloudant_short_notm}} instance through the internal {{site.data.keyword.cloud}} network to avoid upstream application traffic from going over the public network and incurring bandwidth charges. For more information, see [Service Endpoint documentation](/docs/account?topic=account-service-endpoints-overview){: external}, and also. |
-| CORS | Enable CORS support for specific domains by using the {{site.data.keyword.cloudant_short_notm}} Dashboard or API. For more information, see the [CORS API documentation](/apidocs/cloudant#getcorsinformation){: external}. |
+| CORS | Enable CORS support for specific domains by using the {{site.data.keyword.cloudant_short_notm}} Dashboard or API. For more information, see the [CORS API documentation](/docs/apis/cloudant/cloudant-gen2#getcorsinformation){: external}. |
 {: caption="{{site.data.keyword.cloudant_short_notm}} security features" caption-side="top"}
 
 
