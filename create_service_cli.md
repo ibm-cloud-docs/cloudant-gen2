@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024, 2026
-lastupdated: "2026-06-23"
+lastupdated: "2026-07-20"
 
 keywords: identify, api endpoints, log in, select ibm cloudant plan, create ibm cloudant service, create credentials, list service credentials, use ibm cloudant service instance, delete service credentials, delete service instance
 
@@ -122,7 +122,7 @@ The fields in the command are described in the table that follows.
 | `NAME` | Arbitrary name that you give to the instance. |
 | `SERVICE_NAME` | `cloudantnosqldb` |
 | `SERVICE_PLAN_NAME` |   Standard plan (`standard-gen2`)|
-| `LOCATION` | The location where you want to deploy includes the following cities: Frankfurt `eu-de`  |
+| `LOCATION` | The location where you want to deploy includes the following cities: Frankfurt `eu-de`, Washington DC `us-east`  |
 | `--parameters` | Optional. You can specify a JSON file or a JSON string (as described in the following example). |
 {: caption="Basic command format fields" caption-side="top"}
 

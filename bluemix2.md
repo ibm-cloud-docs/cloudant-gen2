@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-06-23"
+lastupdated: "2026-07-20"
 
 keywords: standard plan, request class, provisioned throughput capacity, consumption, capacity, monitor usage, data usage, size limits, locations, tenancy, authentication methods, high availability, disaster recovery, backup, support
 
@@ -60,6 +60,7 @@ The Standard plan is deployed on multi-tenant
 environments. As part of your plan selection, you can choose from the following {{site.data.keyword.cloud_notm}} locations:
 
 - Frankfurt (eu-de)
+- Washington DC (us-east)
 
 Please refer to [IBM Cloud regions and data centers for high availability](/docs/overview?topic=overview-locations) page for more information on the configuration of the data centers in each location.
 
