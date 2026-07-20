@@ -31,7 +31,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {{site.data.keyword.cloudant_short_notm}} Gen 2 is now availabe in Washington DC
 : {{site.data.keyword.cloudant_short_notm}} Gen 2 is now availabe in Washington DC, in addition to Frankfurt (eu-de). For more information, see [Overview of Gen 1 and Gen 2](/docs/cloudant-gen2?topic=cloudant-gen2-overview-gen1-gen2).
 
-### 6 July 2026
+## 6 July 2026
 {: #cloudant-06jul2026}
 {: release-note}
 
