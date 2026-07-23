@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026
-lastupdated: "2026-06-22"
+lastupdated: "2026-07-23"
 
 keywords: principal, action, resource, timestamp, access audit logs, activity tracker
 
@@ -35,6 +35,27 @@ As a security officer, auditor, or manager, you can use the {{site.data.keyword.
     - Reading a list of databases.
     - Viewing monitoring endpoints.
     - Authenticating against the service.
+
+By default, only management events are automatically collected and sent to the {{site.data.keyword.atracker_full_notm}} service.
+{: note}
+
+You must configure each {{site.data.keyword.cloudant_short_notm}} instance to collect and send data events to the {{site.data.keyword.atracker_full_notm}} service.
+{: important}
+
+## Configuring data events for an {{site.data.keyword.cloudant_short_notm}} instance
+{: #at_event_configure}
+
+The following instructions demonstrate how to configure data events for an {{site.data.keyword.cloudant_short_notm}} instance.
+
+### Configuring data events
+{: #configure_at_data_events}
+
+You can change what types of events are sent to {{site.data.keyword.atracker_full_notm}} using the {{site.data.keyword.cloudant_short_notm}} CLI, setting `data_events` to `true`:
+
+``sh
+ibmcloud resource service-instance-update <instance-name> -p '{"dataservices": {"cloudant": { "configuration": { "audit": { "data_events": true }}}}}'
+```
+{: codeblock}
 
 ## List of events
 {: #at_actions-audit-events}

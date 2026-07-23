@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022, 2026
-lastupdated: "2026-06-09"
+lastupdated: "2026-07-23"
 
 keywords: cross-domain, security, configuration endpoints, json format, dashboard, set CORS configuration, read CORS configuration, IBM Cloudant Dashboard, same origin security policy
 
@@ -76,7 +76,7 @@ CORS configuration is set at the service instance level.
 Using the `ibmcloud` CLI, you can set the CORS configuration when creating a Cloudant instance:
 
 ```sh
-ibmcloud resource service-instance-create my_cors_enabled_instance cloudantnosqldb standard-gen2 eu-de --parameters '{"dataservices": {"cloudant":{"capacity_units": 2, "configuration": {"cors": {"enabled": true, "origins": ["https://example.com"]}}}}}'
+ibmcloud resource service-instance-create my_cors_enabled_instance cloudantnosqldb standard-gen2 eu-de --parameters '{"dataservices": {"cloudant":{"capacity_units": 2, "configuration": {"cors": {"enabled": true, "origins": ["https://example.com"]},"audit":{"data_events": true}}}}}'
 ```
 {: codeblock}
 
@@ -93,6 +93,9 @@ Unpacking the `parameters` JSON for readability:
           "origins": [
             "https://example.com"
           ]
+        },
+        "audit": {
+          "data_events": true
         }
       }
     }
@@ -104,6 +107,7 @@ Unpacking the `parameters` JSON for readability:
 - `capacity_units` defines the provisioned throughput capacity of the {{site.data.keyword.cloudant_short_notm}} instance.
 - `enabled` sets whether CORS is enabled or not.
 - `origins` is the list of origin URLs that are allowed to access the {{site.data.keyword.cloudant_short_notm}} instance via CORS.
+- `data_events` when set to true, sends data events as well as management events to {{site.data.keyword.atracker_full_notm}}.
 
 ## Configuring CORS for an existing Cloudant instance
 

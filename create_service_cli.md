@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024, 2026
-lastupdated: "2026-07-20"
+lastupdated: "2026-07-23"
 
 keywords: identify, api endpoints, log in, select ibm cloudant plan, create ibm cloudant service, create credentials, list service credentials, use ibm cloudant service instance, delete service credentials, delete service instance
 
@@ -141,6 +141,9 @@ The `--parameters` JSON is of the following form:
           "origins": [
             "https://example.com"
           ]
+        },
+        "audit": {
+          "data_events": true
         }
       }
     }
@@ -154,6 +157,7 @@ The `--parameters` JSON is of the following form:
 | `dataservices.cloudant.capacity_units` | The number of API capacity units to allocate to the service instance. The default is 1. |
 | `dataservices.cloudant.configuration.cors.enabled` | Whether to enable CORS. The default is `false`. See [How CORS Works](/docs/cloudant-gen2?topic=cloudant-gen2-cross-origin-resource-sharing) for more information. |
 | `dataservices.cloudant.configuration.cors.origins` | A list of origins to allow. The default is an empty list. See [How CORS works](/docs/cloudant-gen2?topic=cloudant-gen2-cross-origin-resource-sharing) for more information. |
+| `dataservices.cloudant.configuration.audit.data_events` | Enable the feed of data events, as well as management events, into {{site.data.keyword.atracker_full_notm}} |
 
 If the `parameter` JSON is not supplied, a {{site.data.keyword.cloudant_short_notm}} instance with 1 capacity unit is created with CORS disabled.
 
