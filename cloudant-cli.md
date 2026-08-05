@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-06-25"
+lastupdated: "2026-08-05"
 
 subcollection: cloudant-gen2
 
@@ -96,20 +96,22 @@ ibmcloud resource service-instance-update RESOURCE_ID -p '{"dataservices": {"clo
 ### View audit events
 {: #cloudant-cli-audit-events}
 
-View event types configured for {{site.data.keyword.atracker_full_notm}} on the {{site.data.keyword.cloudant_short_notm}} instance.
+View event types configured for {{site.data.keyword.atracker_full_notm}} on the {{site.data.keyword.cloudant_short_notm}} instance. Note that management events are always enabled and cannot be disabled.
 
-
-
+```sh
+ibmcloud resource service-instance RESOURCE_ID -o json | jq '.[0].extensions.dataservices.cloudant.configuration.audit'
+```
+{: pre}
 
 ### Update audit events
 {: #cloudant-cli-audit-events-update}
 
-Update event types configured for {{site.data.keyword.atracker_full_notm}} on the {{site.data.keyword.cloudant_short_notm}} instance.
+Update event types configured for {{site.data.keyword.atracker_full_notm}} on the {{site.data.keyword.cloudant_short_notm}} instance. Note that management events are always enabled and cannot be disabled.
 
-The ability to enable `data` events is not yet available in Gen 2.
-{: note}
-
-
+```sh
+ibmcloud resource service-instance-update RESOURCE_ID -p '{"dataservices": {"cloudant": {"configuration" : {"audit" : {"data_events": true}}}}}'
+```
+{: pre}
 
 ### View current throughput
 {: #cloudant-cli-throughput}
