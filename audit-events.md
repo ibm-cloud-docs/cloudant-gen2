@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026
-lastupdated: "2026-07-23"
+lastupdated: "2026-08-18"
 
 keywords: principal, action, resource, timestamp, access audit logs, activity tracker
 
@@ -52,7 +52,7 @@ The following instructions demonstrate how to configure data events for an {{sit
 
 You can change what types of events are sent to {{site.data.keyword.atracker_full_notm}} using the {{site.data.keyword.cloudant_short_notm}} CLI, setting `data_events` to `true`:
 
-``sh
+```sh
 ibmcloud resource service-instance-update <instance-name> -p '{"dataservices": {"cloudant": { "configuration": { "audit": { "data_events": true }}}}}'
 ```
 {: codeblock}
