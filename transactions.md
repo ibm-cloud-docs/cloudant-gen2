@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-06-01"
+lastupdated: "2026-08-24"
 
 keywords: generate uuid, record payments, add more documents, advantages, uuid
 
@@ -118,7 +118,7 @@ While in distributed databases, data is spread around a cluster of servers, and 
 
 To create a unique identifier for use in your application,
 such as an `order_id`,
-call the [`GET _uuids` endpoint](/apidocs/cloudant#getuuids){: external} on the {{site.data.keyword.cloudant_short_notm}} API.
+call the [`GET _uuids` endpoint](/docs/apis/cloudant/cloudant-gen2#getuuids){: external} on the {{site.data.keyword.cloudant_short_notm}} API.
 The database generates an identifier for you.
 The same endpoint can be used to generate multiple IDs by adding a `count` parameter,
 for example, `/_uuids?count=10`.

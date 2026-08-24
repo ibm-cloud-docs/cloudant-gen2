@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-06-09"
+lastupdated: "2026-08-24"
 
 keywords: create database, create api key for replication, grant access permission, set up replications, test replication, configure application, active-active configuration, active-passive configuration, failover, recovering from failover
 
@@ -20,7 +20,7 @@ explains that one way to enable disaster recovery is to use
 {{site.data.keyword.cloudant_short_notm}} replication to create redundancy across regions.
 {: shortdesc}
 
-For more information, see how to [retrieve replication scheduler documents](/apidocs/cloudant#getschedulerdocs) and monitor replication status.
+For more information, see how to [retrieve replication scheduler documents](/docs/apis/cloudant/cloudant-gen2#getschedulerdocs) and monitor replication status.
 
 You can configure replication in {{site.data.keyword.cloudantfull}} by using an "active-active"
 or "active-passive" topology across regions.
@@ -69,7 +69,7 @@ After these accounts are created, complete these steps:
 ## Step 1. Create your databases
 {: #step-1-create-your-databases}
 
-[Create the databases](/apidocs/cloudant#putdatabase){: external} that you want to replicate between
+[Create the databases](/docs/apis/cloudant/cloudant-gen2#putdatabase){: external} that you want to replicate between
 within each account. For the purposes of this example, we'll assume that there's a database called `mydb` in each account.
 
 ## Step 2. Create an IAM API key for each {{site.data.keyword.cloudant_short_notm}} instance
@@ -189,7 +189,7 @@ The failover might be implemented within the application logic itself, or by usi
 A simple test of whether a failover is required is to
 use the main database endpoint as a "heartbeat".
 For example, a simple `GET` request that is sent to the main database endpoint normally returns
-[details about the database](/apidocs/cloudant#getdatabaseinformation){: external}.
+[details about the database](/docs/apis/cloudant/cloudant-gen2#getdatabaseinformation){: external}.
 If no response is received, it might indicate that a failover is necessary.
 
 ### Other configurations
@@ -257,7 +257,7 @@ If you implement rerouting for requests or failover based on a health test, you 
 - Do any replications need restarting?
 - How many pending changes are still waiting for replication into the database?
 
-For more information, see how to [retrieve replication scheduler documents](/apidocs/cloudant#getschedulerdocs){: external} and monitor replication status.
+For more information, see how to [retrieve replication scheduler documents](/docs/apis/cloudant/cloudant-gen2#getschedulerdocs){: external} and monitor replication status.
 
 If a database is being changed continuously, the replication status is unlikely to be zero. You must decide what status threshold is acceptable, or what represents an error state.
 {: note}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-07-07"
+lastupdated: "2026-08-24"
 
 keywords: standard plan, request class, provisioned throughput capacity, consumption, capacity, monitor usage, data usage, size limits
 
@@ -248,7 +248,7 @@ Capacity can be scaled using the {{site.data.keyword.cloud_notm}} Dashboard or A
 ### Scaling using the {{site.data.keyword.cloud_notm}} dashboard
 {: #scaling-provisioned-throughput-dashboard}
 
-You can change the capacity by following these instructions.
+You can view or change the capacity by following these instructions.
 
 1.  Log in to the {{site.data.keyword.cloud_notm}} Dashboard.
 1.  Go to the Service Details page for the instance.
@@ -266,11 +266,25 @@ You can change the capacity by following these instructions.
 ### Scaling using the API
 {: #scaling-provisioned-throughput-api}
 
-Scaling the provisioned throughput capacity of an {{site.data.keyword.cloudant_short_notm}} instance is supported using the Resource Controller API. See the [Update a resource instance API](/apidocs/resource-controller/resource-controller#update-resource-instance) for more details.
+Use the Resource Controller API, CLI or SDKs to view or change the provisioned throughput capacity of an {{site.data.keyword.cloudant_short_notm}} instance.
 
-The capacity configuration can be seen in the JSON below which forms the `parameters` attribute for the Resource Controller API:
-
+Use the [Get a resource instance API](/docs/apis/resource-controller/resource-controller#get-resource-instance) to view the configured capacity.
+Example JSON fragment:
 ```json
-{"dataservices": {"cloudant": {"capacity_units": 42}}}
+{"extensions": {"dataservices": {"cloudant": {"capacity_units": 42}}}}
 ```
 {: codeblock}
+
+Use the [Update a resource instance API](/docs/apis/resource-controller/resource-controller#update-resource-instance) to update capacity.
+
+Example JSON body `parameters` JSON attribute for the Resource Controller API:
+
+```json
+{"parameters":{"dataservices": {"cloudant": {"capacity_units": 42}}}}
+```
+{: codeblock}
+
+## Monitoring usage
+{: #monitoring-usage}
+
+For more information about monitoring your instance usage, see [Monitoring capacity usage](/docs/cloudant-gen2?topic=cloudant-gen2-monitoring-capacity-usage).

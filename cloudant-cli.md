@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-06-25"
+lastupdated: "2026-08-13"
 
 subcollection: cloudant-gen2
 
@@ -96,20 +96,22 @@ ibmcloud resource service-instance-update RESOURCE_ID -p '{"dataservices": {"clo
 ### View audit events
 {: #cloudant-cli-audit-events}
 
-View event types configured for {{site.data.keyword.atracker_full_notm}} on the {{site.data.keyword.cloudant_short_notm}} instance.
+View event types configured for {{site.data.keyword.atracker_full_notm}} on the {{site.data.keyword.cloudant_short_notm}} instance. Note that management events are always enabled and cannot be disabled.
 
-
-
+```sh
+ibmcloud resource service-instance RESOURCE_ID -o json | jq '.[0].extensions.dataservices.cloudant.configuration.audit'
+```
+{: pre}
 
 ### Update audit events
 {: #cloudant-cli-audit-events-update}
 
-Update event types configured for {{site.data.keyword.atracker_full_notm}} on the {{site.data.keyword.cloudant_short_notm}} instance.
+Update event types configured for {{site.data.keyword.atracker_full_notm}} on the {{site.data.keyword.cloudant_short_notm}} instance. Note that management events are always enabled and cannot be disabled.
 
-The ability to enable `data` events is not yet available in Gen 2.
-{: note}
-
-
+```sh
+ibmcloud resource service-instance-update RESOURCE_ID -p '{"dataservices": {"cloudant": {"configuration" : {"audit" : {"data_events": true}}}}}'
+```
+{: pre}
 
 ### View current throughput
 {: #cloudant-cli-throughput}
@@ -121,12 +123,12 @@ For CLI usage `curl` is a good option, though there are many available options.
 
 This example obtains the rate over the range one minute before the most recent available data point.
 
-Replace the example Bearer token below with your own valid {{site.data.keyword.cloud_notm}} IAM token.
+Replace the example Bearer token with your own [IAM OAuth token](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-query), and the `time` parameter with your own evaluation timestamp.
 {: .note}
 
 ```sh
-curl https://us-south.monitoring.cloud.ibm.com/api/prometheus/api/v1/query?query=rate(ibm_cloudant_permitted_operations_total%5B1m%5D) \
+curl "https://us-south.monitoring.cloud.ibm.com/api/v2/promql/query?query=rate(ibm_cloudant_permitted_operations_total%7Bibm_service_instance%3D%22RESOURCE_ID%22%7D%5B1m%5D)&time=2015-07-01T20:10:51.781Z" \
   -H 'Authorization: Bearer A1b2C3QiOiIyMDE4MDgxNDAwMDAwMDAwMDAwMDBjNzYwNzY2YjYxYjYwYjYwIiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJ1c2VyQGdtYWlsLmNvbSIsImF1ZCI6Imh0dHBzOi8vaWF1LmNsb3VkLmlibS5jb20iLCJpYXQiOjE2ODg4ODg4ODgsImV4cCI6MTY4ODg5MjQ4OCwiaXNzIjoiaHR0cHM6Ly9pYXUuY2xvdWQuaWJtLmNvbSIsInNjb3BlIjpbImNsb3VkLnJlYWRlciJdfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c' \
-  -H 'IBMInstanceID: RESOURCE_ID'
+  -H 'IBMInstanceID: MONITORING_RESOURCE_ID'
 ```
 {: pre}

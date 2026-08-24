@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-06-01"
+lastupdated: "2026-08-24"
 
 keywords: database shards, non-partitioned databases, partition key, global query, partition query, create partition database, create partition query index, partition search, tutorials, cardinality, partitioned
 
@@ -170,9 +170,9 @@ See [How sharding affects database performance](/docs/cloudant-gen2?topic=clouda
 
 You can make global queries using:
 
-- [Views](/apidocs/cloudant#postview)
-- [{{site.data.keyword.cloudant_short_notm}} Query](/apidocs/cloudant#postfind)
-- [Search](/apidocs/cloudant#postsearch)
+- [Views](/docs/apis/cloudant/cloudant-gen2#postview)
+- [{{site.data.keyword.cloudant_short_notm}} Query](/docs/apis/cloudant/cloudant-gen2#postfind)
+- [Search](/docs/apis/cloudant/cloudant-gen2#postsearch)
 
 Creating a global index is the default, but you can explicitly create a global index using `"options.partitioned": false` in your design document:
 
@@ -195,9 +195,9 @@ Creating a global index is the default, but you can explicitly create a global i
 
 You can make partition-scoped queries using:
 
-- [Views](/apidocs/cloudant#postpartitionview)
-- [{{site.data.keyword.cloudant_short_notm}} Query](/apidocs/cloudant#postpartitionfind-partitioned-databases)
-- [Search](/apidocs/cloudant#postpartitionsearch)
+- [Views](/docs/apis/cloudant/cloudant-gen2#postpartitionview)
+- [{{site.data.keyword.cloudant_short_notm}} Query](/docs/apis/cloudant/cloudant-gen2#postpartitionfind-partitioned-databases)
+- [Search](/docs/apis/cloudant/cloudant-gen2#postpartitionsearch)
 
 To create a partitioned index that support partition-scoped queries, specify `"options.partitioned": true` in your design document:
 
