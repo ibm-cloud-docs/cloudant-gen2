@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2026
-lastupdated: "2026-06-09"
+lastupdated: "2026-08-24"
 
 keywords: cloudant standard migration, gen1 to gen2, classic infrastructure, vpc, backup and restore, private endpoints, version upgrade
 
@@ -120,14 +120,14 @@ Replications take time to copy every change from the source to target database. 
 
 We can monitor the progress of replications by following the [Replication Scheduler documentation in the Advanced Replication guide](/docs/cloudant-gen2?topic=cloudant-gen2-advanced-replication#the-replication-scheduler). Also, see the [Replication Scheduler blog post in the {{site.data.keyword.cloudant_short_notm}} blog](https://blog.cloudant.com/2024/08/15/Replication-Scheduler.html).
 
-A simple way of determining that replication has the source and target in sync is to [look at the number of documents and deleted documents in the source and target databases](/apidocs/cloudant#getdatabaseinformation){: external}. If they are equal or very close, the replication is complete.
+A simple way of determining that replication has the source and target in sync is to [look at the number of documents and deleted documents in the source and target databases](/docs/apis/cloudant/cloudant-gen2#getdatabaseinformation){: external}. If they are equal or very close, the replication is complete.
 
 ## Step 4: Monitoring index building
 {: #monitoring-index-building}
 
 Copying the data is only half the story. Without fully built secondary indexes, queries directed to target database could be slow or time out. To avoid this, we need to ensure that the secondary indexes are fully built in the target database.
 
-Use the [GET /_active_tasks](https://cloud.ibm.com/apidocs/cloudant#getactivetasks){: external} endpoint to check the status of the index building process. The response will include a list of tasks that are currently running, including any index-building tasks. An empty response indicates that all indexes are fully built, but if new data is being added to the source, there will inevitably be some tasks listed, which are keeping the target's indexes up to date.
+Use the [GET /_active_tasks](https://cloud.ibm.com/docs/apis/cloudant/cloudant-gen2#getactivetasks){: external} endpoint to check the status of the index building process. The response will include a list of tasks that are currently running, including any index-building tasks. An empty response indicates that all indexes are fully built, but if new data is being added to the source, there will inevitably be some tasks listed, which are keeping the target's indexes up to date.
 
 The best way to determine if the indexes are ready is to run a query on the target database and see if it returns results. If the query times out, the indexes are not ready yet. If the query returns results in a timely manner, the indexes are ready and we can proceed with the migration.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-06-01"
+lastupdated: "2026-08-24"
 
 keywords: cloudant query, query parameters, query troubleshooting, query performance, monitor query usage, query scalability
 
@@ -31,7 +31,7 @@ Detecting these queries and fixing them is critical.
 {: #detect-inefficient-query}
 
 [{{site.data.keyword.cloudant_short_notm}} query
-requests](/apidocs/cloudant#postfind) can return information which allows you
+requests](/docs/apis/cloudant/cloudant-gen2#postfind) can return information which allows you
 to detect inefficient queries. If you add `"execution_stats": true` to the
 JSON query you send {{site.data.keyword.cloudant_short_notm}}, you will receive
 statistics about the query execution in the response.

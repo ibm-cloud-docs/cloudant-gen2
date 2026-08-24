@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2020
-lastupdated: "2026-06-04"
+lastupdated: "2026-08-24"
 
 keywords: legacy, iam access controls, use only iam mode, generate service credentials, iam mode
 
@@ -62,7 +62,7 @@ The process is described in the following steps:
 
 1. Create a replication with the same settings but new credentials.
 
-1. Monitor the new replication by using [Active Tasks](/docs/cloudant-gen2?topic=cloudant-gen2-active-tasks), or you can use [`_scheduler/jobs`](/apidocs/cloudant#getschedulerjobs).
+1. Monitor the new replication by using [Active Tasks](/docs/cloudant-gen2?topic=cloudant-gen2-active-tasks), or you can use [`_scheduler/jobs`](/docs/apis/cloudant/cloudant-gen2#getschedulerjobs).
 
 1. When the `changes_pending` field for the new replication is a suitably low value for your requirements, the replication that uses the previous credentials can be deleted.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-06-22"
+lastupdated: "2026-08-24"
 
 keywords:  api keys, enable iam, provisioning,  making requests, required client libraries, actions, endpoints, map actions to iam roles, manage credentials
 
@@ -324,7 +324,7 @@ The following link provides the latest supported version of the {{site.data.keyw
 
 - [`cloudant-java-sdk`](https://github.com/IBM/cloudant-java-sdk/releases){: external}
 
-For an example that uses {{site.data.keyword.cloudant_short_notm}} SDK for Java, see the [API and SDK documentation](/apidocs/cloudant?code=java#authentication){: external}.
+For an example that uses {{site.data.keyword.cloudant_short_notm}} SDK for Java, see the [API and SDK documentation](/docs/apis/cloudant/cloudant-gen2?code=java#authentication){: external}.
 
 
 #### Node.js
@@ -334,7 +334,7 @@ The following link provides the latest supported version of the {{site.data.keyw
 
 - [`cloudant-node-sdk`](https://github.com/IBM/cloudant-node-sdk/releases){: external}
 
-For an example that uses {{site.data.keyword.cloudant_short_notm}} SDK for Node, see the [API and SDK documentation](/apidocs/cloudant?code=node#authentication){: external}.
+For an example that uses {{site.data.keyword.cloudant_short_notm}} SDK for Node, see the [API and SDK documentation](/docs/apis/cloudant/cloudant-gen2?code=node#authentication){: external}.
 
 #### Python
 {: #python-ai}
@@ -343,7 +343,7 @@ The following link provides the latest supported version of the {{site.data.keyw
 
 - [`cloudant-python-sdk`](https://github.com/IBM/cloudant-python-sdk/releases){: external}
 
-For an example that uses {{site.data.keyword.cloudant_short_notm}} SDK for Python, see the [API and SDK documentation](/apidocs/cloudant?code=python#authentication){: external}.
+For an example that uses {{site.data.keyword.cloudant_short_notm}} SDK for Python, see the [API and SDK documentation](/docs/apis/cloudant/cloudant-gen2?code=python#authentication){: external}.
 
 #### Go
 {: #go-ai}
@@ -352,7 +352,7 @@ The following link provides the latest supported version of the {{site.data.keyw
 
 - [`go-sdk`](https://github.com/IBM/cloudant-go-sdk/releases){: external}
 
-For an example that uses {{site.data.keyword.cloudant_short_notm}} SDK for Go, see the [API and SDK documentation](/apidocs/cloudant?code=go#authentication){: external}.
+For an example that uses {{site.data.keyword.cloudant_short_notm}} SDK for Go, see the [API and SDK documentation](/docs/apis/cloudant/cloudant-gen2?code=go#authentication){: external}.
 
 
 

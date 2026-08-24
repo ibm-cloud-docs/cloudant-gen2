@@ -120,6 +120,7 @@ toc:
           topics:
           - active_tasks.md
           - managing_tasks.md
+          - monitoring-capacity-usage.md
       - topicgroup:
           label: Migrating your plan
           topics:
