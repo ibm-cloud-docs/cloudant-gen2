@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2026
-lastupdated: "2026-06-10"
+lastupdated: "2026-09-17"
 
 keywords: cloudant gen 2 overview
 
@@ -33,7 +33,7 @@ Gen 2 databases are built on {{site.data.keyword.cloud}}’s latest platform, ba
 
 | Category                     | Gen 1                                                            | Gen 2                                             |
 |-----------------------------|-------------------------------------------------------------------|---------------------------------------------------|
-| Regions                     | Dallas (us-south) <br> Sao Paulo (br-sao) <br> Toronto (ca-tor) <br> Washington (us-east) <br> Frankfurt (eu-de) <br> London (eu-gb) <br> Madrid (eu-es) <br> Osaka (jp-osa) <br> Sydney (au-syd) <br> Tokyo (jp-tok) | Washington (us-east) <br> Frankfurt (eu-de)  |
+| Regions                     | Dallas (us-south) <br> Sao Paulo (br-sao) <br> Toronto (ca-tor) <br> Washington (us-east) <br> Frankfurt (eu-de) <br> London (eu-gb) <br> Madrid (eu-es) <br> Osaka (jp-osa) <br> Sydney (au-syd) <br> Tokyo (jp-tok) | Dallas (us-south) <br> Washington (us-east) <br> Frankfurt (eu-de) <br> London (eu-gb) <br> Madrid (eu-es) <br> Sydney (au-syd)  |
 | Database editions           | Cloudant Standard <br> Cloudant Standard Dedicated | Cloudant Standard  |
 | Endpoints                   |Public endpoints <br>  Private endpoints (dedicated-only)                          | Public endpoints <br> Private endpoints                                |
 | Hosting models              | Multi-tenant <br> Dedicated  | Multi-tenant                                 |
