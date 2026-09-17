@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-04-04"
+  years: 2020, 2026
+lastupdated: "2026-09-17"
 
 keywords: endpoints, service credentials, authentication,cloudant dashboard, curl, client libraries, IP allowlisting
 
@@ -17,7 +17,7 @@ subcollection: cloudant-gen2
 
 {{site.data.keyword.cloudantfull}} is accessed through an HTTP API where the traffic is encrypted in flight and at rest. This document describes the different parts that you use to connect to {{site.data.keyword.cloudant_short_notm}}:
 
-- Endpoints - a public endpoint and a Virutal Private Endpoint (VPE)
+- Endpoints - a public endpoint and a Virtual Private Endpoint (VPE)
 - Service credentials
 - Authentication
 - Accessing the {{site.data.keyword.cloudant_short_notm}} Dashboard
@@ -50,7 +50,7 @@ The {{site.data.keyword.cloud_notm}} VPE URL is shown in the following example:
 
 For more information on accessing your database on the private network, see the [Service Endpoints](/docs/cloudant-gen2?topic=cloudant-gen2-connecting) documentation.
 
-
+For more information on restricting access to your instance, see [Context-based restrictions](/docs/cloudant-gen2?topic=cloudant-gen2-cbr).
 
 ## Service credentials
 {: #service-credentials-sc}
@@ -120,3 +120,8 @@ the {{site.data.keyword.cloud_notm}} Dashboard instance details page. You can us
 
 {{site.data.keyword.cloudant_short_notm}} has official client libraries for Java&trade;, Node.js, Go and Python. For more information, see the [client libraries documentation](/docs/cloudant-gen2?topic=cloudant-gen2-client-libraries#client-libraries) to access the libraries, and see examples for connecting to an {{site.data.keyword.cloudant_short_notm}}
 instance from each.
+
+## Restricting access to your {{site.data.keyword.cloudant_short_notm}} instance
+{: #restricting-access-sc}
+
+To restrict access to your {{site.data.keyword.cloudant_short_notm}} instance, see [Context-based restrictions](/docs/cloudant-gen2?topic=cloudant-gen2-cbr).

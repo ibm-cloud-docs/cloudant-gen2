@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-07-07"
+lastupdated: "2026-09-17"
 
 keywords: dbaas data protection, top-tier physical platforms, secure access control, data loss, corruption, byok, encryption
 
@@ -59,9 +59,8 @@ for you to control access to data:
 | TLS | {{site.data.keyword.cloudant_short_notm}} requires the use of TLS 1.2+. {{site.data.keyword.cloudant_short_notm}} strongly recommends that you do not pin certificates in your application. Certificates renew regularly, at least annually, and intermediate and root certificates could change when they do. {{site.data.keyword.cloudant_short_notm}} does not send out notifications before certificate renewals. We recommend that you keep your certificate truststore up to date with the latest root certificates. {{site.data.keyword.cloudant_short_notm}} acquires its certificates from Let's Encrypt. You can find their root certificates on the [Let's Encrypt Chains of Trust](https://letsencrypt.org/certificates/){: external} page. {{site.data.keyword.cloudant_short_notm}} sends a notification if we move to a different certificate authority. |
 | Endpoints | All {{site.data.keyword.cloudant_short_notm}} instances are provided with an external URL that is publicly accessible and a VPE URL that is only available on the private network. |
 | CORS | Enable CORS support for specific domains by using the {{site.data.keyword.cloudant_short_notm}} Dashboard or API. For more information, see the [CORS documentation](/docs/cloudant-gen2?topic=cloudant-gen2-cross-origin-resource-sharing). |
-{: caption="{{site.data.keyword.cloudant_short_notm}} security features" caption-side="top"}
-
-
+| IP allowlisting | See [Context-based restrictions](/docs/cloudant-gen2?topic=cloudant-gen2-cbr). |
+{: caption="{{site.data.keyword.cloudant_short_notm}} security features" caption-side="bottom"}
 
 ## Protection against data loss or corruption
 {: #protection-against-data-loss-or-corruption-sd}
@@ -73,7 +72,7 @@ to help you maintain data quality and availability:
 |--------|------------|
 | Redundant and durable data storage | By default, {{site.data.keyword.cloudant_short_notm}} saves to disk three copies of every document to three different availability zones. Saving the copies ensures that a working failover copy of your data is always available, regardless of failures. |
 | Data Replication and export | You can replicate your databases continuously between clusters in different data centers. Another option is to export data from {{site.data.keyword.cloudant_short_notm}} (in JSON format) to other locations or sources (such as your own data center) for added data redundancy. |
-{: caption="{{site.data.keyword.cloudant_short_notm}} data quality and availability features" caption-side="top"}
+{: caption="{{site.data.keyword.cloudant_short_notm}} data quality and availability features" caption-side="bottom"}
 
 ## Deleting your data in {{site.data.keyword.cloudant_short_notm}}
 {: #data-delete}

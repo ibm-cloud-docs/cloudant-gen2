@@ -141,6 +141,7 @@ toc:
           - manage-scc.md
           - secure-data.md
           - audit-events.md
+          - howto-cbr.md
   - navgroup:
       id: reference
       topics:
