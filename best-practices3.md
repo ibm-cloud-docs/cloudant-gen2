@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-06-22"
+lastupdated: "2026-09-03"
 
 keywords: design document management, rate limits, partitioned queries, time boxed database, logging, http traffic, primary index
 
@@ -48,12 +48,12 @@ If you routinely create conflicts, you must really consider model changes: even 
 - {{site.data.keyword.cloudant_short_notm}} guide to versions and [MVCC](/docs/cloudant-gen2?topic=cloudant-gen2-document-versioning-and-mvcc#document-versioning-and-mvcc)
 - Three-part blog series on [conflicts](https://blog.cloudant.com/search.html#Introduction%20to%20conflicts)
 
-## Deleting documents doesn't delete them
+## Deleting documents doesn't delete them (immediately)
 {: #deleting-documents}
 
-Deleting a document from an {{site.data.keyword.cloudant_short_notm}} database doesn’t purge it. Deletion is implemented by writing a new revision of the document under deletion, with an added field `_deleted: true`. This special revision is called a `tombstone`. Tombstones still take up space and are also passed around by the replicator.
+Deleting a document from an {{site.data.keyword.cloudant_short_notm}} creates a new document revision that contains only document metadata: the `_id`, `_rev`, and a `_deleted` flag.  This special revision is called a `tombstone`. Tombstones still take up a small amount of space and are also passed around by the replicator. After 90 days, the tombstone itself is completely removed.
 
-Models that rely on frequent deletions of documents are not suitable for {{site.data.keyword.cloudant_short_notm}}. For more information, see {{site.data.keyword.cloudant_short_notm}} tombstone [docs](/docs/cloudant-gen2?topic=cloudant-gen2-documents#-tombstone-documents).
+For more information, see {{site.data.keyword.cloudant_short_notm}} tombstone [docs](/docs/cloudant-gen2?topic=cloudant-gen2-tombstone-docs).
 
 ## Be careful with updates
 {: #take-care-with-updates}
@@ -62,9 +62,9 @@ It is more expensive in the end to mutate existing documents than to create new 
 
 Prefer models that are immutable.
 
-When you read the following sections, *Deleting documents doesn't delete them* and *Be careful with updates*, they provoke an obvious question. That is, does the data set grow unbounded if my model is immutable? If you accept that deletes don’t completely purge the deleted data and that updates are not updating in place in terms of data volume growth, not much difference exists. Managing data volume over time requires different techniques.
+When you read the following sections, *Deleting documents doesn't delete them* and *Be careful with updates*, they provoke an obvious question. That is, does the data set grow unbounded if my model is immutable?
 
-The only way to truly reclaim space is to delete databases, rather than documents. You can replicate only winning revisions to a new database and delete the old to get rid of lingering deletes and conflicts. Or perhaps you can build it into your model to regularly start new databases (say ‘annual data’) and archive off (or remove) outdated data, if your use case allows.
+Deleting documents piecemeal is very inefficient - much better to use a write-only approach, using time-boxed databases and remove entire databases when the data is no longer needed.
 
 ## Eventual consistency is a harsh taskmaster (also known as don’t read your writes)
 {: #eventual-consistency-harsh-taskmaster}

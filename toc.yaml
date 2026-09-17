@@ -200,6 +200,7 @@ toc:
           - model-data-faq.md
           - pricing-faq.md
           - provisioned-throughput-capacity-faq.md
+          - tombstones-automated-removal-faq.md
           - changes-feed-faq.md
           - cloudant-query-faq.md
       - get-help.md

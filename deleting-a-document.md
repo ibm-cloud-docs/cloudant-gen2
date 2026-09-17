@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-07-07"
+lastupdated: "2026-09-03"
 
 keywords: create document, update document, read document, bulk operations, tombstone documents
 
@@ -24,8 +24,7 @@ The steps shown here demonstrate how to delete a document.
 If you fail to provide the most recent `_rev`, {{site.data.keyword.cloudant_short_notm}} responds with a [409 error](/docs/apis/cloudant/cloudant-gen2#error-handling){: external}. This error prevents you overwriting data that were changed by other clients. If the write [quorum](/docs/cloudant-gen2?topic=cloudant-gen2-documents#quorum-writing-and-reading-data) can't be met, a [`202` response](/docs/apis/cloudant/cloudant-gen2#error-handling){: external} is returned.
 {: note}
 
-{{site.data.keyword.cloudant_short_notm}} doesn't completely delete the specified document. Instead, it leaves a [tombstone](/docs/cloudant-gen2?topic=cloudant-gen2-tombstone-docs) with basic information about the document. The tombstone is required so that the delete action can be replicated to other copies of the database. Since the tombstones stay in the database indefinitely,
-creating new documents and deleting them increases the disk space usage of a database. They might also increase the query time for the primary index, which is used to look up documents by their ID.
+{{site.data.keyword.cloudant_short_notm}} doesn't completely delete the specified document. Instead, it leaves a [tombstone](/docs/cloudant-gen2?topic=cloudant-gen2-tombstone-docs) with basic information about the document. The tombstone is required so that the delete action can be replicated to other copies of the database. The tombstone is retained for 90 days before being fully removed.
 
 The following steps show you how to delete a request by using HTTP.
 

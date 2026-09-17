@@ -175,25 +175,15 @@ the [{{site.data.keyword.IBM_notm}} Data Privacy Office (DPO)](https://www.ibm.c
 When a *right to be forgotten* request is made from the {{site.data.keyword.IBM_notm}} DPO, {{site.data.keyword.cloudant_short_notm}} verifies the request,
 explicitly triggers database compaction, and verifies that compaction occurred.
 At the end of this process, the only version of the document is its tombstone
-(`_id`, `_rev`, `_deleted`, and any fields your application includes there).
+(`_id`, `_rev`, `_deleted`). The tombstone itself is completely removed 90 days after the document was deleted.
 
 ### Removal of tombstones
 {: #removal-of-tombstones}
 
-{{site.data.keyword.cloudant_short_notm}} can completely remove all references and data for a
-document when required. This task is
-an operator-managed process called purging. Before you request that documents be purged, it's
-important to understand that purged documents *cannot be recovered* by
-{{site.data.keyword.cloudant_short_notm}} once the
-process is complete.
+Tombstones are completely removed shortly after 90 days from the document's deletion.
 
-The CouchDB purge API is not supported by {{site.data.keyword.cloudant_short_notm}}.
-{: tip}
-
-In the context of GDPR, purging is only required if PI is used in a document ID. It's a bad
-idea for an `_id` to store PI for lots of reasons, but a handful of semi-valid use
-cases exist (for example, a unique email). If possible, encrypt or pseudonymize data so it's opaque
-to {{site.data.keyword.cloudant_short_notm}}.
+### Right to be forgotten
+{: #right-to-be-forgotten}
 
 If a document needs removal through a *right to be forgotten* request, follow these steps:
 
